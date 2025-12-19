@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -11,8 +12,13 @@ export default function Footer() {
                 <div className={styles.footerGrid}>
                     <div className={styles.footerSection}>
                         <div className={styles.logo}>
-                            <span className={styles.logoIcon}>⚡</span>
-                            <span className={styles.logoText}>VoltVentures</span>
+                            <Image
+                                src="/logo.jpg"
+                                alt="VoltVentures Logo"
+                                width={180}
+                                height={60}
+                                className={styles.logoImage}
+                            />
                         </div>
                         <p className={styles.tagline}>
                             Powering Lebanon's electrical future with expert solutions and innovative technology.

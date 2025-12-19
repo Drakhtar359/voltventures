@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
@@ -20,11 +21,17 @@ export default function Navbar() {
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.container}>
         <div className={styles.logo}>
-          <span className={styles.logoIcon}>⚡</span>
-          <span className={styles.logoText}>VoltVentures</span>
+          <Image
+            src="/logo.jpg"
+            alt="VoltVentures Logo"
+            width={180}
+            height={60}
+            className={styles.logoImage}
+            priority
+          />
         </div>
 
-        <button 
+        <button
           className={styles.menuToggle}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"

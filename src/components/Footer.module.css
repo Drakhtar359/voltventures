@@ -26,22 +26,13 @@
 .logo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 1.5rem;
-    font-weight: 700;
     margin-bottom: 0.5rem;
 }
 
-.logoIcon {
-    font-size: 2rem;
-    filter: drop-shadow(0 0 10px var(--color-electric-cyan));
-}
-
-.logoText {
-    background: linear-gradient(135deg, var(--color-electric-blue), var(--color-electric-cyan));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+.logoImage {
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px rgba(0, 217, 255, 0.2));
 }
 
 .tagline {
@@ -100,5 +91,10 @@
     .footerGrid {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+
+    .logoImage {
+        width: 140px;
+        height: auto;
     }
 }

@@ -27,23 +27,18 @@
 .logo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--color-white);
-    text-decoration: none;
+    cursor: pointer;
 }
 
-.logoIcon {
-    font-size: 2rem;
-    animation: electric-pulse 2s infinite;
+.logoImage {
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px rgba(0, 217, 255, 0.3));
+    transition: filter 0.3s ease;
 }
 
-.logoText {
-    background: linear-gradient(135deg, var(--color-electric-blue), var(--color-electric-cyan));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+.logoImage:hover {
+    filter: drop-shadow(0 0 15px rgba(0, 217, 255, 0.6));
 }
 
 .navLinks {
@@ -142,5 +137,10 @@
 
     .ctaButton {
         display: none;
+    }
+
+    .logoImage {
+        width: 140px;
+        height: auto;
     }
 }
