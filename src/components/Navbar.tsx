@@ -22,7 +22,7 @@ export default function Navbar() {
       <div className={styles.container}>
         <div className={styles.logo}>
           <Image
-            src="/logo.jpg"
+            src="/logo.png"
             alt="VoltVentures Logo"
             width={180}
             height={60}

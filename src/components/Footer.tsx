@@ -13,7 +13,7 @@ export default function Footer() {
                     <div className={styles.footerSection}>
                         <div className={styles.logo}>
                             <Image
-                                src="/logo.jpg"
+                                src="/logo.png"
                                 alt="VoltVentures Logo"
                                 width={180}
                                 height={60}
