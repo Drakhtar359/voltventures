@@ -1,0 +1,146 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(10, 14, 39, 0.3);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 217, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(10, 14, 39, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 217, 255, 0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+.logoIcon {
+    font-size: 2rem;
+    animation: electric-pulse 2s infinite;
+}
+
+.logoText {
+    background: linear-gradient(135deg, var(--color-electric-blue), var(--color-electric-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.navLinks {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navLinks li a {
+    color: var(--color-gray-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navLinks li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-electric-blue), var(--color-electric-cyan));
+    transition: width 0.3s ease;
+}
+
+.navLinks li a:hover {
+    color: var(--color-electric-cyan);
+}
+
+.navLinks li a:hover::after {
+    width: 100%;
+}
+
+.ctaButton {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, var(--color-electric-blue), var(--color-electric-cyan));
+    color: var(--color-bg-dark);
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.ctaButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px var(--color-electric-cyan);
+}
+
+.menuToggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.menuToggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--color-electric-cyan);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .navLinks {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        flex-direction: column;
+        background: rgba(10, 14, 39, 0.98);
+        padding: 2rem;
+        width: 80%;
+        max-width: 300px;
+        height: calc(100vh - 70px);
+        transition: right 0.3s ease;
+        border-left: 1px solid rgba(0, 217, 255, 0.2);
+    }
+
+    .navLinksOpen {
+        right: 0;
+    }
+
+    .menuToggle {
+        display: flex;
+    }
+
+    .ctaButton {
+        display: none;
+    }
+}

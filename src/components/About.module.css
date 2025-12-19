@@ -1,0 +1,121 @@
+.about {
+    padding: 6rem 0;
+    background: var(--color-bg-dark);
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.sectionTitle {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, var(--color-electric-blue), var(--color-electric-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.content {
+    display: grid;
+    gap: 3rem;
+}
+
+.mainInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-gray-light);
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.owner {
+    color: var(--color-electric-cyan);
+    font-weight: 700;
+}
+
+.highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.highlightCard {
+    background: rgba(10, 14, 39, 0.5);
+    border: 1px solid rgba(0, 217, 255, 0.2);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.highlightCard::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(0, 217, 255, 0.1) 0%, transparent 70%);
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%);
+}
+
+.highlightCard:hover {
+    border-color: var(--color-electric-cyan);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 217, 255, 0.2);
+}
+
+.highlightCard:hover::before {
+    width: 200%;
+    height: 200%;
+}
+
+.highlightIcon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 10px var(--color-electric-cyan));
+}
+
+.highlightTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-electric-blue);
+    margin-bottom: 0.5rem;
+}
+
+.highlightText {
+    font-size: 1rem;
+    color: var(--color-gray-light);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .sectionTitle {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .highlights {
+        grid-template-columns: 1fr;
+    }
+}
